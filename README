@@ -1,0 +1,28 @@
+# GIS Assignment for Fellows by Forogh Akbari
+### Task 1: Automatize subprocesses with Python
+1)	Find and stack relevant raster bands in a directory (5pts)
+2)	Check for metadata and allow reprojection if necessary (5pts)
+3)	Allow resampling to other pixel resolution (5pts)
+4)	Allow clipping with an extent or mask layer (boundary layer: La Palma Bounds) (5pts)
+5)	Allow normalizing of input DN to a chosen range 
+(for example: 0-1, explain what you do and why) (5pts)
+6)	Output a new .tif file based on the input bands (in this case: .jp2) (5pts)
+7)	Bonus: Cloud masking (any method) (Bonus: 5pts)
+
+
+### Task 2: Data science with GIS 
+#### Shapefile with administrative boundaries, 2 satellite stacked satellie images from raw data 
+1)	Please find a (high)-resolution raster population settlement layer from any source and create a mean population density / count per administrative unit based on the La_palma_bounds.geojson. (10pts)
+2)	Visualize the result in the jupyter notebook with a colormap, legend showing the population counts per district. (5pts)
+3)	Find a way to visualize the lava outflow on the 30.09.21 (second image) and plot the result in the jupyter notebook. (2.5pts)
+4)	Quantify the area affected by the lava flow from the volcanic eruption (2.5pts)
+5)	Create training data points with any software you prefer with at least 4 classes: [water, urban, vegetation, sand/soil/rock]. Create at least 15 points per class. The points can be stored in any data-format. Explain how you conducted this step and what potential errors can occur and how they could be mitigated. (10pts)
+6)	Use the training points to sample raster band values and train a model (e.g.: Random Forest with Sklearn) based on the satellite image 10.09.21 (image 1). Explain why you chose this model and what it does better or worse compared to others. (5pts)
+7)	Report accuracies / confusion matrices of your prediction (accuracy scores are not judged, but the interpretation and commentary by the candidate) (2.5pts)
+8)	Find a way to quantify the amount of lost urban or vegetation area caused by the area flooded with lava on the 30.09.21 (image 2) (2.5pts)
+
+### Task 3– Querying vector data and perform analysis (30 pts)
+1.	Create a script to query healthcare facilities in La Palma Island (more info on tags: https://wiki.openstreetmap.org/wiki/Key:healthcare). (5 pts Script, 2.5pts manual download)
+2.	Query the road network for La Palma (OSM provides it as well). Also check for the spatial integrity of the data by eliminating any broken components, self-intersecting lines etc.) (5 pts Script, 2.5pts manual download)
+3.	Network analysis: Create a drive time matrix for each health facility on the island and their corresponding travel times to each other and create a simple interpolation of the points to visualize it. The visualization should show approximate travel times to health care facilities on the island. (Can also be done with polygon isochrones). If the task is very computationally intensive, use a subset of the data. (5 pts, any method, jupyter notebook preferred)
+4.	Network analysis: Check whether any of the queried health facilities in the region north and south of the volcanic eruption flow are affected. Report your findings.  (10 pts, any method, jupyter notebook preferred)
